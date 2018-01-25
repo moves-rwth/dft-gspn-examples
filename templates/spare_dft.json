@@ -1,0 +1,71 @@
+{
+    "toplevel": "11",
+    "parameters": {},
+    "nodes": [
+        {
+            "data": {
+                "id": "0",
+                "name": "A",
+                "type": "be",
+                "rate": "1",
+                "dorm": "1",
+                "label": "A (1)"
+            },
+            "position": {
+                "x": 440,
+                "y": 260
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "1",
+                "name": "B",
+                "type": "be",
+                "rate": "1",
+                "dorm": "1",
+                "label": "B (1)"
+            },
+            "position": {
+                "x": 548,
+                "y": 265
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "11",
+                "name": "S",
+                "type": "spare",
+                "children": [
+                    "0",
+                    "1"
+                ],
+                "label": "S"
+            },
+            "position": {
+                "x": 496.4972615044363,
+                "y": 145.8618200610438
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "spare"
+        }
+    ]
+}
