@@ -1,0 +1,94 @@
+{
+    "toplevel": "0",
+    "parameters": {},
+    "nodes": [
+        {
+            "data": {
+                "id": "0",
+                "name": "Z",
+                "type": "pand",
+                "children": [
+                    "1",
+                    "3"
+                ],
+                "label": "Z"
+            },
+            "position": {
+                "x": 386,
+                "y": 76
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "pand"
+        },
+        {
+            "data": {
+                "id": "1",
+                "name": "X",
+                "type": "or",
+                "children": [
+                    "2",
+                    "3"
+                ],
+                "label": "X"
+            },
+            "position": {
+                "x": 319,
+                "y": 223
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "or"
+        },
+        {
+            "data": {
+                "id": "2",
+                "name": "A",
+                "type": "be",
+                "rate": "1",
+                "dorm": "1",
+                "label": "A (1)"
+            },
+            "position": {
+                "x": 249,
+                "y": 357
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        },
+        {
+            "data": {
+                "id": "3",
+                "name": "B",
+                "type": "be",
+                "rate": "1",
+                "dorm": "1",
+                "label": "B (1)"
+            },
+            "position": {
+                "x": 442,
+                "y": 354
+            },
+            "group": "nodes",
+            "removed": false,
+            "selected": false,
+            "selectable": true,
+            "locked": false,
+            "grabbable": true,
+            "classes": "be"
+        }
+    ]
+}
