@@ -1,61 +1,40 @@
 <project name="storm-export" version="121">
   <gspn name="DftToGspnTransformation" >
     <nodes>
-      <place marking="1" name ="A_2_active" x="28.1429" y="44.5714" />
       <place marking="0" name ="A_2_failed" x="34.1429" y="44.5714" />
-      <place marking="0" name ="A_2_dabled" x="22.1429" y="44.5714" />
-      <place marking="0" name ="A_2_unavail" x="40.1429" y="44.5714" />
-      <place marking="1" name ="B_3_active" x="43.7143" y="44.2857" />
+      <place marking="1" name ="A_2_active" x="28.1429" y="44.5714" />
       <place marking="0" name ="B_3_failed" x="49.7143" y="44.2857" />
-      <place marking="0" name ="B_3_dabled" x="37.7143" y="44.2857" />
-      <place marking="0" name ="B_3_unavail" x="55.7143" y="44.2857" />
+      <place marking="1" name ="B_3_active" x="43.7143" y="44.2857" />
       <place marking="0" name ="Z_0_failed" x="42.5714" y="19.4286" />
-      <place marking="0" name ="Z_0_unavail" x="48.5714" y="19.4286" />
       <place marking="0" name ="Z_0_failsave" x="36.5714" y="19.4286" />
-      <place marking="0" name ="D_1_1_failed" x="30" y="12" />
-      <place marking="0" name ="D_1_1_unavail" x="36" y="12" />
-      <place marking="1" name ="D_1_1_coin" x="15" y="22" />
-      <place marking="0" name ="D_1_1_forward" x="21" y="22" />
-      <place marking="0" name ="D_1_1_flip" x="18" y="22" />
       <transition name="A_2_activeFailing" type="EXP" nservers-x="1" x="31.1429" y="47.5714" />
       <transition name="A_2_passiveFailing" type="EXP" nservers-x="1" x="31.1429" y="41.5714" />
       <transition name="B_3_activeFailing" type="EXP" nservers-x="1" x="46.7143" y="47.2857" />
       <transition name="B_3_passiveFailing" type="EXP" nservers-x="1" x="46.7143" y="41.2857" />
       <transition name="Z_0_failing" type="IMM" priority="1" x="42.5714" y="25.4286" />
       <transition name="Z_0_failsaving1" type="IMM" priority="1" x="36.5714" y="25.4286" />
-      <transition name="D_1_1_start_flip" type="IMM" priority="1" x="19" y="4" />
-      <transition name="_win_flip" type="IMM" priority="1" x="22" y="4" />
-      <transition name="D_1_1_propagate_A_2" type="IMM" priority="1" x="25" y="4" />
+      <transition name="D_1_1_propagate_A_2" type="IMM" priority="1" x="19" y="4" />
     </nodes>
     <edges>
       <arc head="A_2_activeFailing" tail="A_2_active" kind="INPUT" mult="1" />
       <arc head="A_2_activeFailing" tail="A_2_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_2_activeFailing" tail="A_2_dabled" kind="INHIBITOR" mult="1" />
       <arc head="A_2_active" tail="A_2_activeFailing" kind="OUTPUT" mult="1" />
       <arc head="A_2_failed" tail="A_2_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_2_unavail" tail="A_2_activeFailing" kind="OUTPUT" mult="1" />
       <arc head="A_2_passiveFailing" tail="A_2_active" kind="INHIBITOR" mult="1" />
       <arc head="A_2_passiveFailing" tail="A_2_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_2_passiveFailing" tail="A_2_dabled" kind="INHIBITOR" mult="1" />
       <arc head="A_2_failed" tail="A_2_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_2_unavail" tail="A_2_passiveFailing" kind="OUTPUT" mult="1" />
       <arc head="B_3_activeFailing" tail="B_3_active" kind="INPUT" mult="1" />
       <arc head="B_3_activeFailing" tail="B_3_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_3_activeFailing" tail="B_3_dabled" kind="INHIBITOR" mult="1" />
       <arc head="B_3_active" tail="B_3_activeFailing" kind="OUTPUT" mult="1" />
       <arc head="B_3_failed" tail="B_3_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_3_unavail" tail="B_3_activeFailing" kind="OUTPUT" mult="1" />
       <arc head="B_3_passiveFailing" tail="B_3_active" kind="INHIBITOR" mult="1" />
       <arc head="B_3_passiveFailing" tail="B_3_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_3_passiveFailing" tail="B_3_dabled" kind="INHIBITOR" mult="1" />
       <arc head="B_3_failed" tail="B_3_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_3_unavail" tail="B_3_passiveFailing" kind="OUTPUT" mult="1" />
       <arc head="Z_0_failing" tail="A_2_failed" kind="INPUT" mult="1" />
       <arc head="Z_0_failing" tail="B_3_failed" kind="INPUT" mult="1" />
       <arc head="Z_0_failing" tail="Z_0_failed" kind="INHIBITOR" mult="1" />
       <arc head="Z_0_failing" tail="Z_0_failsave" kind="INHIBITOR" mult="1" />
       <arc head="Z_0_failed" tail="Z_0_failing" kind="OUTPUT" mult="1" />
-      <arc head="Z_0_unavail" tail="Z_0_failing" kind="OUTPUT" mult="1" />
       <arc head="A_2_failed" tail="Z_0_failing" kind="OUTPUT" mult="1" />
       <arc head="B_3_failed" tail="Z_0_failing" kind="OUTPUT" mult="1" />
       <arc head="Z_0_failsaving1" tail="B_3_failed" kind="INPUT" mult="1" />
@@ -63,18 +42,10 @@
       <arc head="Z_0_failsaving1" tail="Z_0_failsave" kind="INHIBITOR" mult="1" />
       <arc head="B_3_failed" tail="Z_0_failsaving1" kind="OUTPUT" mult="1" />
       <arc head="Z_0_failsave" tail="Z_0_failsaving1" kind="OUTPUT" mult="1" />
-      <arc head="D_1_1_start_flip" tail="D_1_1_coin" kind="INPUT" mult="1" />
-      <arc head="D_1_1_start_flip" tail="B_3_failed" kind="INPUT" mult="1" />
-      <arc head="B_3_failed" tail="D_1_1_start_flip" kind="OUTPUT" mult="1" />
-      <arc head="D_1_1_flip" tail="D_1_1_start_flip" kind="OUTPUT" mult="1" />
-      <arc head="_win_flip" tail="D_1_1_flip" kind="INPUT" mult="1" />
-      <arc head="D_1_1_forward" tail="_win_flip" kind="OUTPUT" mult="1" />
-      <arc head="D_1_1_propagate_A_2" tail="D_1_1_forward" kind="INPUT" mult="1" />
+      <arc head="D_1_1_propagate_A_2" tail="B_3_failed" kind="INPUT" mult="1" />
       <arc head="D_1_1_propagate_A_2" tail="A_2_failed" kind="INHIBITOR" mult="1" />
-      <arc head="D_1_1_propagate_A_2" tail="A_2_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="D_1_1_forward" tail="D_1_1_propagate_A_2" kind="OUTPUT" mult="1" />
+      <arc head="B_3_failed" tail="D_1_1_propagate_A_2" kind="OUTPUT" mult="1" />
       <arc head="A_2_failed" tail="D_1_1_propagate_A_2" kind="OUTPUT" mult="1" />
-      <arc head="A_2_unavail" tail="D_1_1_propagate_A_2" kind="OUTPUT" mult="1" />
     </edges>
   </gspn>
 </project>

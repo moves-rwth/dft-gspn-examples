@@ -1,12 +1,12 @@
 <project name="storm-export" version="121">
   <gspn name="DftToGspnTransformation" >
     <nodes>
-      <place marking="1" name ="A_0_active" x="59.8571" y="37.1429" />
       <place marking="0" name ="A_0_failed" x="65.8571" y="37.1429" />
+      <place marking="1" name ="A_0_active" x="59.8571" y="37.1429" />
       <place marking="0" name ="A_0_dabled" x="53.8571" y="37.1429" />
       <place marking="0" name ="A_0_unavail" x="71.8571" y="37.1429" />
-      <place marking="1" name ="B_1_active" x="75.2857" y="37.8571" />
       <place marking="0" name ="B_1_failed" x="81.2857" y="37.8571" />
+      <place marking="1" name ="B_1_active" x="75.2857" y="37.8571" />
       <place marking="0" name ="B_1_dabled" x="69.2857" y="37.8571" />
       <place marking="0" name ="B_1_unavail" x="87.2857" y="37.8571" />
       <place marking="0" name ="Z_2_failed" x="72.1429" y="14" />
@@ -45,8 +45,8 @@
       <arc head="Z_2_failing" tail="Z_2_failed" kind="INHIBITOR" mult="1" />
       <arc head="Z_2_failed" tail="Z_2_failing" kind="OUTPUT" mult="1" />
       <arc head="Z_2_unavail" tail="Z_2_failing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_failed" tail="Z_2_failing" kind="OUTPUT" mult="1" />
       <arc head="B_1_failed" tail="Z_2_failing" kind="OUTPUT" mult="1" />
+      <arc head="A_0_failed" tail="Z_2_failing" kind="OUTPUT" mult="1" />
     </edges>
   </gspn>
 </project>

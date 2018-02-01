@@ -1,8 +1,8 @@
 <project name="storm-export" version="121">
   <gspn name="DftToGspnTransformation" >
     <nodes>
-      <place marking="1" name ="A_0_active" x="68.5714" y="18.5714" />
       <place marking="0" name ="A_0_failed" x="74.5714" y="18.5714" />
+      <place marking="1" name ="A_0_active" x="68.5714" y="18.5714" />
       <place marking="0" name ="A_0_dabled" x="62.5714" y="18.5714" />
       <place marking="0" name ="A_0_unavail" x="80.5714" y="18.5714" />
       <transition name="A_0_activeFailing" type="EXP" nservers-x="1" x="71.5714" y="21.5714" />

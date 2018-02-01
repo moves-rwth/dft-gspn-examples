@@ -1,24 +1,24 @@
 <project name="storm-export" version="121">
   <gspn name="DftToGspnTransformation" >
     <nodes>
-      <place marking="1" name ="A_0_active" x="59.8571" y="37.1429" />
       <place marking="0" name ="A_0_failed" x="65.8571" y="37.1429" />
+      <place marking="1" name ="A_0_active" x="59.8571" y="37.1429" />
       <place marking="0" name ="A_0_dabled" x="53.8571" y="37.1429" />
       <place marking="0" name ="A_0_unavail" x="71.8571" y="37.1429" />
-      <place marking="1" name ="B_1_active" x="75.2857" y="37.8571" />
       <place marking="0" name ="B_1_failed" x="81.2857" y="37.8571" />
+      <place marking="1" name ="B_1_active" x="75.2857" y="37.8571" />
       <place marking="0" name ="B_1_dabled" x="69.2857" y="37.8571" />
       <place marking="0" name ="B_1_unavail" x="87.2857" y="37.8571" />
-      <place marking="1" name ="C_5_active" x="91.8571" y="37.5714" />
       <place marking="0" name ="C_5_failed" x="97.8571" y="37.5714" />
+      <place marking="1" name ="C_5_active" x="91.8571" y="37.5714" />
       <place marking="0" name ="C_5_dabled" x="85.8571" y="37.5714" />
       <place marking="0" name ="C_5_unavail" x="103.857" y="37.5714" />
       <place marking="0" name ="Z_4_failed" x="77.4286" y="14.1429" />
       <place marking="0" name ="Z_4_unavail" x="83.4286" y="14.1429" />
       <place marking="0" name ="Z_4_collector" x="77.4286" y="17.1429" />
-      <place marking="0" name ="Z_4_child_fail_inhib0" x="46" y="1" />
-      <place marking="0" name ="Z_4_child_fail_inhib1" x="49" y="1" />
-      <place marking="0" name ="Z_4_child_fail_inhib2" x="52" y="1" />
+      <place marking="1" name ="Z_4_child_next0" x="46" y="1" />
+      <place marking="1" name ="Z_4_child_next1" x="49" y="1" />
+      <place marking="1" name ="Z_4_child_next2" x="52" y="1" />
       <transition name="A_0_activeFailing" type="EXP" nservers-x="1" x="62.8571" y="40.1429" />
       <transition name="A_0_passiveFailing" type="EXP" nservers-x="1" x="62.8571" y="34.1429" />
       <transition name="B_1_activeFailing" type="EXP" nservers-x="1" x="78.2857" y="40.8571" />
@@ -68,21 +68,18 @@
       <arc head="Z_4_failing" tail="Z_4_failed" kind="INHIBITOR" mult="1" />
       <arc head="Z_4_failed" tail="Z_4_failing" kind="OUTPUT" mult="1" />
       <arc head="Z_4_unavail" tail="Z_4_failing" kind="OUTPUT" mult="1" />
+      <arc head="Z_4_child_collect0" tail="Z_4_child_next0" kind="INPUT" mult="1" />
       <arc head="Z_4_child_collect0" tail="A_0_failed" kind="INPUT" mult="1" />
-      <arc head="Z_4_child_collect0" tail="Z_4_child_fail_inhib0" kind="INHIBITOR" mult="1" />
       <arc head="Z_4_collector" tail="Z_4_child_collect0" kind="OUTPUT" mult="1" />
-      <arc head="Z_4_child_fail_inhib0" tail="Z_4_child_collect0" kind="OUTPUT" mult="1" />
       <arc head="A_0_failed" tail="Z_4_child_collect0" kind="OUTPUT" mult="1" />
+      <arc head="Z_4_child_collect1" tail="Z_4_child_next1" kind="INPUT" mult="1" />
       <arc head="Z_4_child_collect1" tail="B_1_failed" kind="INPUT" mult="1" />
-      <arc head="Z_4_child_collect1" tail="Z_4_child_fail_inhib1" kind="INHIBITOR" mult="1" />
       <arc head="Z_4_collector" tail="Z_4_child_collect1" kind="OUTPUT" mult="1" />
-      <arc head="Z_4_child_fail_inhib1" tail="Z_4_child_collect1" kind="OUTPUT" mult="1" />
       <arc head="B_1_failed" tail="Z_4_child_collect1" kind="OUTPUT" mult="1" />
+      <arc head="Z_4_child_collect2" tail="Z_4_child_next2" kind="INPUT" mult="1" />
       <arc head="Z_4_child_collect2" tail="C_5_failed" kind="INPUT" mult="1" />
-      <arc head="Z_4_child_collect2" tail="Z_4_child_fail_inhib2" kind="INHIBITOR" mult="1" />
       <arc head="Z_4_collector" tail="Z_4_child_collect2" kind="OUTPUT" mult="1" />
       <arc head="C_5_failed" tail="Z_4_child_collect2" kind="OUTPUT" mult="1" />
-      <arc head="Z_4_child_fail_inhib2" tail="Z_4_child_collect2" kind="OUTPUT" mult="1" />
     </edges>
   </gspn>
 </project>

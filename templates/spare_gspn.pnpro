@@ -1,12 +1,12 @@
 <project name="storm-export" version="121">
   <gspn name="DftToGspnTransformation" >
     <nodes>
-      <place marking="0" name ="A_0_active" x="59.8571" y="37.1429" />
       <place marking="0" name ="A_0_failed" x="65.8571" y="37.1429" />
+      <place marking="0" name ="A_0_active" x="59.8571" y="37.1429" />
       <place marking="0" name ="A_0_dabled" x="53.8571" y="37.1429" />
       <place marking="0" name ="A_0_unavail" x="71.8571" y="37.1429" />
-      <place marking="0" name ="B_1_active" x="75.2857" y="37.8571" />
       <place marking="0" name ="B_1_failed" x="81.2857" y="37.8571" />
+      <place marking="0" name ="B_1_active" x="75.2857" y="37.8571" />
       <place marking="0" name ="B_1_dabled" x="69.2857" y="37.8571" />
       <place marking="0" name ="B_1_unavail" x="87.2857" y="37.8571" />
       <place marking="0" name ="S_11_failed" x="80.9282" y="12.8374" />
@@ -23,11 +23,11 @@
       <transition name="S_11_cannot_claim_A_0" type="IMM" priority="1" x="63.9282" y="12.8374" />
       <transition name="S_11_claim_A_0" type="IMM" priority="1" x="55.9282" y="20.8374" />
       <transition name="S_11_next_claim_0" type="IMM" priority="1" x="63.9282" y="25.8374" />
-      <transition name="S_11_activate_1_0" type="IMM" priority="1" x="55.9282" y="8.8374" />
+      <transition name="S_11_activate_0_0" type="IMM" priority="1" x="52.9282" y="8.8374" />
       <transition name="S_11_cannot_claim_B_1" type="IMM" priority="1" x="77.9282" y="12.8374" />
       <transition name="S_11_claim_B_1" type="IMM" priority="1" x="69.9282" y="20.8374" />
       <transition name="S_11_next_claim_1" type="IMM" priority="1" x="77.9282" y="25.8374" />
-      <transition name="S_11_activate_2_1" type="IMM" priority="1" x="58.9282" y="8.8374" />
+      <transition name="S_11_activate_1_1" type="IMM" priority="1" x="55.9282" y="8.8374" />
     </nodes>
     <edges>
       <arc head="A_0_activeFailing" tail="A_0_active" kind="INPUT" mult="1" />
@@ -64,12 +64,12 @@
       <arc head="S_11_next_claim_0" tail="A_0_failed" kind="INPUT" mult="1" />
       <arc head="A_0_failed" tail="S_11_next_claim_0" kind="OUTPUT" mult="1" />
       <arc head="S_11_consider_B_1" tail="S_11_next_claim_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_activate_1_0" tail="S_11_claimed_A_0" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_1_0" tail="S_11_active" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_1_0" tail="A_0_active" kind="INHIBITOR" mult="1" />
-      <arc head="S_11_claimed_A_0" tail="S_11_activate_1_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_active" tail="S_11_activate_1_0" kind="OUTPUT" mult="1" />
-      <arc head="A_0_active" tail="S_11_activate_1_0" kind="OUTPUT" mult="1" />
+      <arc head="S_11_activate_0_0" tail="S_11_claimed_A_0" kind="INPUT" mult="1" />
+      <arc head="S_11_activate_0_0" tail="S_11_active" kind="INPUT" mult="1" />
+      <arc head="S_11_activate_0_0" tail="A_0_active" kind="INHIBITOR" mult="1" />
+      <arc head="S_11_claimed_A_0" tail="S_11_activate_0_0" kind="OUTPUT" mult="1" />
+      <arc head="S_11_active" tail="S_11_activate_0_0" kind="OUTPUT" mult="1" />
+      <arc head="A_0_active" tail="S_11_activate_0_0" kind="OUTPUT" mult="1" />
       <arc head="S_11_cannot_claim_B_1" tail="S_11_consider_B_1" kind="INPUT" mult="1" />
       <arc head="S_11_cannot_claim_B_1" tail="B_1_unavail" kind="INPUT" mult="1" />
       <arc head="B_1_unavail" tail="S_11_cannot_claim_B_1" kind="OUTPUT" mult="1" />
@@ -82,14 +82,14 @@
       <arc head="S_11_next_claim_1" tail="S_11_claimed_B_1" kind="INPUT" mult="1" />
       <arc head="S_11_next_claim_1" tail="B_1_failed" kind="INPUT" mult="1" />
       <arc head="B_1_failed" tail="S_11_next_claim_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_failed" tail="S_11_next_claim_1" kind="OUTPUT" mult="1" />
       <arc head="S_11_unavail" tail="S_11_next_claim_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_activate_2_1" tail="S_11_claimed_B_1" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_2_1" tail="S_11_active" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_2_1" tail="B_1_active" kind="INHIBITOR" mult="1" />
-      <arc head="S_11_claimed_B_1" tail="S_11_activate_2_1" kind="OUTPUT" mult="1" />
-      <arc head="B_1_active" tail="S_11_activate_2_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_active" tail="S_11_activate_2_1" kind="OUTPUT" mult="1" />
+      <arc head="S_11_failed" tail="S_11_next_claim_1" kind="OUTPUT" mult="1" />
+      <arc head="S_11_activate_1_1" tail="S_11_claimed_B_1" kind="INPUT" mult="1" />
+      <arc head="S_11_activate_1_1" tail="S_11_active" kind="INPUT" mult="1" />
+      <arc head="S_11_activate_1_1" tail="B_1_active" kind="INHIBITOR" mult="1" />
+      <arc head="S_11_claimed_B_1" tail="S_11_activate_1_1" kind="OUTPUT" mult="1" />
+      <arc head="S_11_active" tail="S_11_activate_1_1" kind="OUTPUT" mult="1" />
+      <arc head="B_1_active" tail="S_11_activate_1_1" kind="OUTPUT" mult="1" />
     </edges>
   </gspn>
 </project>
