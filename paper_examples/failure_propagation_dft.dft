@@ -1,0 +1,5 @@
+toplevel "Z";
+"Z" pand "X" "B";
+"X" or "A" "B";
+"B" lambda=1.0 dorm=1.0;
+"A" lambda=1.0 dorm=1.0;
