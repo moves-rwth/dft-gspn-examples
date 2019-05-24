@@ -1,51 +1,52 @@
-<project name="storm-export" version="121">
-  <gspn name="DftToGspnTransformation" >
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation">
     <nodes>
-      <place marking="0" name ="A_2_failed" x="34.1429" y="44.5714" />
-      <place marking="1" name ="A_2_active" x="28.1429" y="44.5714" />
-      <place marking="0" name ="B_3_failed" x="49.7143" y="44.2857" />
-      <place marking="1" name ="B_3_active" x="43.7143" y="44.2857" />
-      <place marking="0" name ="Z_0_failed" x="42.5714" y="19.4286" />
-      <place marking="0" name ="Z_0_failsave" x="36.5714" y="19.4286" />
-      <transition name="A_2_activeFailing" type="EXP" nservers-x="1" x="31.1429" y="47.5714" />
-      <transition name="A_2_passiveFailing" type="EXP" nservers-x="1" x="31.1429" y="41.5714" />
-      <transition name="B_3_activeFailing" type="EXP" nservers-x="1" x="46.7143" y="47.2857" />
-      <transition name="B_3_passiveFailing" type="EXP" nservers-x="1" x="46.7143" y="41.2857" />
-      <transition name="Z_0_failing" type="IMM" priority="1" x="42.5714" y="25.4286" />
-      <transition name="Z_0_failsaving1" type="IMM" priority="1" x="36.5714" y="25.4286" />
-      <transition name="D_1_1_propagate_A_2" type="IMM" priority="1" x="19" y="4" />
+      <place name="A_failed" x="8.142899999999997" y="27.571399999999997"/>
+      <place marking="1" name="A_active" x="2.142900000000001" y="27.571399999999997"/>
+      <place name="B_failed" x="23.7143" y="26.2857"/>
+      <place marking="1" name="B_active" x="17.7143" y="26.2857"/>
+      <place name="Z_failed" x="22.571399999999997" y="3.4285999999999994"/>
+      <place name="Z_failsave" x="16.571399999999997" y="3.4285999999999994"/>
+      <transition delay="1.00000" name="A_activeFailing" nservers="1" type="EXP" x="5.1429" y="30.571399999999997"/>
+      <transition delay="1.00000" name="A_passiveFailing" nservers="1" type="EXP" x="5.1429" y="24.571399999999997"/>
+      <transition delay="1.00000" name="B_activeFailing" nservers="1" type="EXP" x="20.714300000000005" y="29.2857"/>
+      <transition delay="1.00000" name="B_passiveFailing" nservers="1" type="EXP" x="20.714300000000005" y="23.2857"/>
+      <transition name="Z_failing" type="IMM" x="22.571399999999997" y="9.4286"/>
+      <transition name="Z_failsaving1" type="IMM" x="16.571399999999997" y="9.4286"/>
+      <transition name="D_1_propagate_A" type="IMM" x="32.85" y="9.0"/>
     </nodes>
     <edges>
-      <arc head="A_2_activeFailing" tail="A_2_active" kind="INPUT" mult="1" />
-      <arc head="A_2_activeFailing" tail="A_2_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_2_active" tail="A_2_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_2_failed" tail="A_2_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_2_passiveFailing" tail="A_2_active" kind="INHIBITOR" mult="1" />
-      <arc head="A_2_passiveFailing" tail="A_2_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_2_failed" tail="A_2_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_3_activeFailing" tail="B_3_active" kind="INPUT" mult="1" />
-      <arc head="B_3_activeFailing" tail="B_3_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_3_active" tail="B_3_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_3_failed" tail="B_3_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_3_passiveFailing" tail="B_3_active" kind="INHIBITOR" mult="1" />
-      <arc head="B_3_passiveFailing" tail="B_3_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_3_failed" tail="B_3_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="Z_0_failing" tail="A_2_failed" kind="INPUT" mult="1" />
-      <arc head="Z_0_failing" tail="B_3_failed" kind="INPUT" mult="1" />
-      <arc head="Z_0_failing" tail="Z_0_failed" kind="INHIBITOR" mult="1" />
-      <arc head="Z_0_failing" tail="Z_0_failsave" kind="INHIBITOR" mult="1" />
-      <arc head="Z_0_failed" tail="Z_0_failing" kind="OUTPUT" mult="1" />
-      <arc head="A_2_failed" tail="Z_0_failing" kind="OUTPUT" mult="1" />
-      <arc head="B_3_failed" tail="Z_0_failing" kind="OUTPUT" mult="1" />
-      <arc head="Z_0_failsaving1" tail="B_3_failed" kind="INPUT" mult="1" />
-      <arc head="Z_0_failsaving1" tail="A_2_failed" kind="INHIBITOR" mult="1" />
-      <arc head="Z_0_failsaving1" tail="Z_0_failsave" kind="INHIBITOR" mult="1" />
-      <arc head="B_3_failed" tail="Z_0_failsaving1" kind="OUTPUT" mult="1" />
-      <arc head="Z_0_failsave" tail="Z_0_failsaving1" kind="OUTPUT" mult="1" />
-      <arc head="D_1_1_propagate_A_2" tail="B_3_failed" kind="INPUT" mult="1" />
-      <arc head="D_1_1_propagate_A_2" tail="A_2_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_3_failed" tail="D_1_1_propagate_A_2" kind="OUTPUT" mult="1" />
-      <arc head="A_2_failed" tail="D_1_1_propagate_A_2" kind="OUTPUT" mult="1" />
+      <arc head="A_activeFailing" kind="INPUT" tail="A_active"/>
+      <arc head="A_activeFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_active" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_active"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_passiveFailing"/>
+      <arc head="B_activeFailing" kind="INPUT" tail="B_active"/>
+      <arc head="B_activeFailing" kind="INHIBITOR" tail="B_failed"/>
+      <arc head="B_active" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_failed" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_active"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_failed"/>
+      <arc head="B_failed" kind="OUTPUT" tail="B_passiveFailing"/>
+      <arc head="Z_failing" kind="INPUT" tail="A_failed"/>
+      <arc head="Z_failing" kind="INPUT" tail="B_failed"/>
+      <arc head="Z_failing" kind="INHIBITOR" tail="Z_failed"/>
+      <arc head="Z_failing" kind="INHIBITOR" tail="Z_failsave"/>
+      <arc head="Z_failed" kind="OUTPUT" tail="Z_failing"/>
+      <arc head="A_failed" kind="OUTPUT" tail="Z_failing"/>
+      <arc head="B_failed" kind="OUTPUT" tail="Z_failing"/>
+      <arc head="Z_failsaving1" kind="INPUT" tail="B_failed"/>
+      <arc head="Z_failsaving1" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="Z_failsaving1" kind="INHIBITOR" tail="Z_failsave"/>
+      <arc head="B_failed" kind="OUTPUT" tail="Z_failsaving1"/>
+      <arc head="Z_failsave" kind="OUTPUT" tail="Z_failsaving1"/>
+      <arc head="D_1_propagate_A" kind="INPUT" tail="B_failed"/>
+      <arc head="D_1_propagate_A" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="B_failed" kind="OUTPUT" tail="D_1_propagate_A"/>
+      <arc head="A_failed" kind="OUTPUT" tail="D_1_propagate_A"/>
     </edges>
   </gspn>
 </project>
