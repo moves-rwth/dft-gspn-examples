@@ -1,54 +1,56 @@
-<project name="storm-export" version="121">
-  <gspn name="DftToGspnTransformation" >
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation">
     <nodes>
-      <place marking="0" name ="A_0_failed" x="65.8571" y="37.1429" />
-      <place marking="1" name ="A_0_active" x="59.8571" y="37.1429" />
-      <place marking="1" name ="A_0_dabled" x="53.8571" y="37.1429" />
-      <place marking="0" name ="A_0_unavail" x="71.8571" y="37.1429" />
-      <place marking="0" name ="B_1_failed" x="81.2857" y="37.8571" />
-      <place marking="1" name ="B_1_active" x="75.2857" y="37.8571" />
-      <place marking="1" name ="B_1_dabled" x="69.2857" y="37.8571" />
-      <place marking="0" name ="B_1_unavail" x="87.2857" y="37.8571" />
-      <place marking="0" name ="Z_12_failed" x="80.9282" y="13.2505" />
-      <place marking="0" name ="Z_12_unavail" x="86.9282" y="13.2505" />
-      <place marking="1" name ="Z_12_next_A_0" x="65.9282" y="18.2505" />
-      <place marking="0" name ="Z_12_next_B_1" x="68.9282" y="18.2505" />
-      <transition name="A_0_activeFailing" type="EXP" nservers-x="1" x="62.8571" y="40.1429" />
-      <transition name="A_0_passiveFailing" type="EXP" nservers-x="1" x="62.8571" y="34.1429" />
-      <transition name="B_1_activeFailing" type="EXP" nservers-x="1" x="78.2857" y="40.8571" />
-      <transition name="B_1_passiveFailing" type="EXP" nservers-x="1" x="78.2857" y="34.8571" />
-      <transition name="Z_12_unblock_A_0" type="IMM" priority="1" x="65.9282" y="24.2505" />
-      <transition name="Z_12_unblock_B_1" type="IMM" priority="1" x="68.9282" y="24.2505" />
+      <place name="A_failed" x="13.857100000000003" y="23.142899999999997"/>
+      <place marking="1" name="A_active" x="7.857100000000003" y="23.142899999999997"/>
+      <place marking="1" name="A_dabled" x="1.8571000000000026" y="23.142899999999997"/>
+      <place name="A_unavail" x="19.857100000000003" y="23.142899999999997"/>
+      <place name="B_failed" x="41.285700000000006" y="22.857100000000003"/>
+      <place marking="1" name="B_active" x="35.285700000000006" y="22.857100000000003"/>
+      <place marking="1" name="B_dabled" x="29.285700000000006" y="22.857100000000003"/>
+      <place name="B_unavail" x="47.285700000000006" y="22.857100000000003"/>
+      <place name="Z_failed" x="33.928200000000004" y="4.250500000000002"/>
+      <place name="Z_unavail" x="39.928200000000004" y="4.250500000000002"/>
+      <place marking="1" name="Z_next_A" x="22.0" y="4.0"/>
+      <place name="Z_next_B" x="27.0" y="4.0"/>
+      <transition delay="1.00000" name="A_activeFailing" nservers="1" type="EXP" x="10.857100000000006" y="26.142899999999997"/>
+      <transition delay="1.00000" name="A_passiveFailing" nservers="1" type="EXP" x="10.857100000000006" y="20.142899999999997"/>
+      <transition delay="1.00000" name="B_activeFailing" nservers="1" type="EXP" x="38.285700000000006" y="25.857100000000003"/>
+      <transition delay="1.00000" name="B_passiveFailing" nservers="1" type="EXP" x="38.285700000000006" y="19.857100000000003"/>
+      <transition name="Z_unblock_A" type="IMM" x="21.92820000000001" y="10.250499999999999"/>
+      <transition name="Z_unblock_B" type="IMM" x="27.85" y="10.0"/>
     </nodes>
     <edges>
-      <arc head="A_0_activeFailing" tail="A_0_active" kind="INPUT" mult="1" />
-      <arc head="A_0_activeFailing" tail="A_0_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_activeFailing" tail="A_0_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_active" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_failed" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_unavail" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_active" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_failed" tail="A_0_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_unavail" tail="A_0_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_activeFailing" tail="B_1_active" kind="INPUT" mult="1" />
-      <arc head="B_1_activeFailing" tail="B_1_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_activeFailing" tail="B_1_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_active" tail="B_1_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_failed" tail="B_1_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_unavail" tail="B_1_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_passiveFailing" tail="B_1_active" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_passiveFailing" tail="B_1_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_passiveFailing" tail="B_1_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_failed" tail="B_1_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_unavail" tail="B_1_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="Z_12_unblock_A_0" tail="Z_12_next_A_0" kind="INPUT" mult="1" />
-      <arc head="Z_12_unblock_A_0" tail="A_0_dabled" kind="INPUT" mult="1" />
-      <arc head="Z_12_next_B_1" tail="Z_12_unblock_A_0" kind="OUTPUT" mult="1" />
-      <arc head="Z_12_unblock_B_1" tail="Z_12_next_B_1" kind="INPUT" mult="1" />
-      <arc head="Z_12_unblock_B_1" tail="B_1_dabled" kind="INPUT" mult="1" />
-      <arc head="Z_12_unblock_B_1" tail="A_0_failed" kind="INPUT" mult="1" />
+      <arc head="A_activeFailing" kind="INPUT" tail="A_active"/>
+      <arc head="A_activeFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_activeFailing" kind="INHIBITOR" tail="A_dabled"/>
+      <arc head="A_active" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_active"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_dabled"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_passiveFailing"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="A_passiveFailing"/>
+      <arc head="B_activeFailing" kind="INPUT" tail="B_active"/>
+      <arc head="B_activeFailing" kind="INHIBITOR" tail="B_failed"/>
+      <arc head="B_activeFailing" kind="INHIBITOR" tail="B_dabled"/>
+      <arc head="B_active" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_failed" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_unavail" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_active"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_failed"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_dabled"/>
+      <arc head="B_failed" kind="OUTPUT" tail="B_passiveFailing"/>
+      <arc head="B_unavail" kind="OUTPUT" tail="B_passiveFailing"/>
+      <arc head="Z_unblock_A" kind="INPUT" tail="Z_next_A"/>
+      <arc head="Z_unblock_A" kind="INPUT" tail="A_dabled"/>
+      <arc head="Z_next_B" kind="OUTPUT" tail="Z_unblock_A"/>
+      <arc head="Z_unblock_B" kind="INPUT" tail="Z_next_B"/>
+      <arc head="Z_unblock_B" kind="INPUT" tail="B_dabled"/>
+      <arc head="Z_unblock_B" kind="INPUT" tail="A_failed"/>
+      <arc head="A_failed" kind="OUTPUT" tail="Z_unblock_B"/>
     </edges>
   </gspn>
 </project>

@@ -1,25 +1,26 @@
-<project name="storm-export" version="121">
-  <gspn name="DftToGspnTransformation" >
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation">
     <nodes>
-      <place marking="0" name ="A_0_failed" x="74.5714" y="18.5714" />
-      <place marking="1" name ="A_0_active" x="68.5714" y="18.5714" />
-      <place marking="0" name ="A_0_dabled" x="62.5714" y="18.5714" />
-      <place marking="0" name ="A_0_unavail" x="80.5714" y="18.5714" />
-      <transition name="A_0_activeFailing" type="EXP" nservers-x="1" x="71.5714" y="21.5714" />
-      <transition name="A_0_passiveFailing" type="EXP" nservers-x="1" x="71.5714" y="15.5714" />
+      <place name="A_failed" x="17.571399999999997" y="9.5714"/>
+      <place marking="1" name="A_active" x="11.571399999999997" y="9.5714"/>
+      <place name="A_dabled" x="5.571399999999997" y="9.5714"/>
+      <place name="A_unavail" x="23.571399999999997" y="9.5714"/>
+      <transition delay="1.00000" name="A_activeFailing" nservers="1" type="EXP" x="14.5714" y="12.5714"/>
+      <transition delay="1.00000" name="A_passiveFailing" nservers="1" type="EXP" x="14.5714" y="6.571400000000001"/>
     </nodes>
     <edges>
-      <arc head="A_0_activeFailing" tail="A_0_active" kind="INPUT" mult="1" />
-      <arc head="A_0_activeFailing" tail="A_0_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_activeFailing" tail="A_0_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_active" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_failed" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_unavail" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_active" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_failed" tail="A_0_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_unavail" tail="A_0_passiveFailing" kind="OUTPUT" mult="1" />
+      <arc head="A_activeFailing" kind="INPUT" tail="A_active"/>
+      <arc head="A_activeFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_activeFailing" kind="INHIBITOR" tail="A_dabled"/>
+      <arc head="A_active" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_active"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_dabled"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_passiveFailing"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="A_passiveFailing"/>
     </edges>
   </gspn>
 </project>

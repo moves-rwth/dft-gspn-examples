@@ -1,95 +1,98 @@
-<project name="storm-export" version="121">
-  <gspn name="DftToGspnTransformation" >
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This project file has been saved by the New GreatSPN Editor, v.100 --><project name="storm-export" version="121">
+  <gspn name="DftToGspnTransformation">
     <nodes>
-      <place marking="0" name ="A_0_failed" x="65.8571" y="37.1429" />
-      <place marking="0" name ="A_0_active" x="59.8571" y="37.1429" />
-      <place marking="0" name ="A_0_dabled" x="53.8571" y="37.1429" />
-      <place marking="0" name ="A_0_unavail" x="71.8571" y="37.1429" />
-      <place marking="0" name ="B_1_failed" x="81.2857" y="37.8571" />
-      <place marking="0" name ="B_1_active" x="75.2857" y="37.8571" />
-      <place marking="0" name ="B_1_dabled" x="69.2857" y="37.8571" />
-      <place marking="0" name ="B_1_unavail" x="87.2857" y="37.8571" />
-      <place marking="0" name ="S_11_failed" x="80.9282" y="12.8374" />
-      <place marking="0" name ="S_11_unavail" x="86.9282" y="12.8374" />
-      <place marking="1" name ="S_11_active" x="50.9282" y="8.8374" />
-      <place marking="1" name ="S_11_consider_A_0" x="55.9282" y="12.8374" />
-      <place marking="0" name ="S_11_claimed_A_0" x="55.9282" y="25.8374" />
-      <place marking="0" name ="S_11_consider_B_1" x="69.9282" y="12.8374" />
-      <place marking="0" name ="S_11_claimed_B_1" x="69.9282" y="25.8374" />
-      <transition name="A_0_activeFailing" type="EXP" nservers-x="1" x="62.8571" y="40.1429" />
-      <transition name="A_0_passiveFailing" type="EXP" nservers-x="1" x="62.8571" y="34.1429" />
-      <transition name="B_1_activeFailing" type="EXP" nservers-x="1" x="78.2857" y="40.8571" />
-      <transition name="B_1_passiveFailing" type="EXP" nservers-x="1" x="78.2857" y="34.8571" />
-      <transition name="S_11_cannot_claim_A_0" type="IMM" priority="1" x="63.9282" y="12.8374" />
-      <transition name="S_11_claim_A_0" type="IMM" priority="1" x="55.9282" y="20.8374" />
-      <transition name="S_11_next_claim_0" type="IMM" priority="1" x="63.9282" y="25.8374" />
-      <transition name="S_11_activate_0_0" type="IMM" priority="1" x="52.9282" y="8.8374" />
-      <transition name="S_11_cannot_claim_B_1" type="IMM" priority="1" x="77.9282" y="12.8374" />
-      <transition name="S_11_claim_B_1" type="IMM" priority="1" x="69.9282" y="20.8374" />
-      <transition name="S_11_next_claim_1" type="IMM" priority="1" x="77.9282" y="25.8374" />
-      <transition name="S_11_activate_1_1" type="IMM" priority="1" x="55.9282" y="8.8374" />
+      <place name="A_failed" x="14.857100000000003" y="38.1429"/>
+      <place name="A_active" x="8.857100000000003" y="38.1429"/>
+      <place name="A_dabled" x="2.8571000000000026" y="38.1429"/>
+      <place name="A_unavail" x="20.857100000000003" y="38.1429"/>
+      <place name="B_failed" x="47.285700000000006" y="37.8571"/>
+      <place name="B_active" x="41.285700000000006" y="37.8571"/>
+      <place name="B_dabled" x="35.285700000000006" y="37.8571"/>
+      <place name="B_unavail" x="53.285700000000006" y="37.8571"/>
+      <place name="S_failed" x="47.928200000000004" y="12.8374"/>
+      <place name="S_unavail" x="53.928200000000004" y="12.8374"/>
+      <place marking="1" name="S_active" x="14.0" y="5.0"/>
+      <place marking="1" name="S_consider_A" x="22.928199999999997" y="12.8374"/>
+      <place name="S_claimed_A" x="22.928199999999997" y="25.8374"/>
+      <place name="S_consider_B" x="36.928200000000004" y="12.8374"/>
+      <place name="S_claimed_B" x="37.0" y="26.0"/>
+      <transition delay="1.00000" name="A_activeFailing" nservers="1" type="EXP" x="11.857100000000006" y="41.1429"/>
+      <transition delay="1.00000" name="A_passiveFailing" nservers="1" type="EXP" x="11.857100000000006" y="35.1429"/>
+      <transition delay="1.00000" name="B_activeFailing" nservers="1" type="EXP" x="44.285700000000006" y="40.8571"/>
+      <transition delay="1.00000" name="B_passiveFailing" nservers="1" type="EXP" x="44.285700000000006" y="34.8571"/>
+      <transition name="S_cannot_claim_A" type="IMM" x="30.928199999999997" y="12.8374"/>
+      <transition name="S_claim_A" type="IMM" x="22.928199999999997" y="20.8374"/>
+      <transition name="S_next_claim_0" type="IMM" x="30.928199999999997" y="25.8374"/>
+      <transition name="S_activate_0_0" type="IMM" x="17.85" y="9.0"/>
+      <transition name="S_cannot_claim_B" type="IMM" x="44.92820000000001" y="12.8374"/>
+      <transition name="S_claim_B" type="IMM" x="36.92820000000001" y="20.8374"/>
+      <transition name="S_next_claim_1" type="IMM" x="44.92820000000001" y="25.8374"/>
+      <transition name="S_activate_1_1" type="IMM" x="23.85" y="9.0"/>
     </nodes>
     <edges>
-      <arc head="A_0_activeFailing" tail="A_0_active" kind="INPUT" mult="1" />
-      <arc head="A_0_activeFailing" tail="A_0_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_activeFailing" tail="A_0_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_active" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_failed" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_unavail" tail="A_0_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_active" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_failed" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_passiveFailing" tail="A_0_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="A_0_failed" tail="A_0_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="A_0_unavail" tail="A_0_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_activeFailing" tail="B_1_active" kind="INPUT" mult="1" />
-      <arc head="B_1_activeFailing" tail="B_1_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_activeFailing" tail="B_1_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_active" tail="B_1_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_failed" tail="B_1_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_unavail" tail="B_1_activeFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_passiveFailing" tail="B_1_active" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_passiveFailing" tail="B_1_failed" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_passiveFailing" tail="B_1_dabled" kind="INHIBITOR" mult="1" />
-      <arc head="B_1_failed" tail="B_1_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="B_1_unavail" tail="B_1_passiveFailing" kind="OUTPUT" mult="1" />
-      <arc head="S_11_cannot_claim_A_0" tail="S_11_consider_A_0" kind="INPUT" mult="1" />
-      <arc head="S_11_cannot_claim_A_0" tail="A_0_unavail" kind="INPUT" mult="1" />
-      <arc head="A_0_unavail" tail="S_11_cannot_claim_A_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_consider_B_1" tail="S_11_cannot_claim_A_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_claim_A_0" tail="S_11_consider_A_0" kind="INPUT" mult="1" />
-      <arc head="S_11_claim_A_0" tail="A_0_unavail" kind="INHIBITOR" mult="1" />
-      <arc head="S_11_claimed_A_0" tail="S_11_claim_A_0" kind="OUTPUT" mult="1" />
-      <arc head="A_0_unavail" tail="S_11_claim_A_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_next_claim_0" tail="S_11_claimed_A_0" kind="INPUT" mult="1" />
-      <arc head="S_11_next_claim_0" tail="A_0_failed" kind="INPUT" mult="1" />
-      <arc head="A_0_failed" tail="S_11_next_claim_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_consider_B_1" tail="S_11_next_claim_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_activate_0_0" tail="S_11_claimed_A_0" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_0_0" tail="S_11_active" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_0_0" tail="A_0_active" kind="INHIBITOR" mult="1" />
-      <arc head="S_11_claimed_A_0" tail="S_11_activate_0_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_active" tail="S_11_activate_0_0" kind="OUTPUT" mult="1" />
-      <arc head="A_0_active" tail="S_11_activate_0_0" kind="OUTPUT" mult="1" />
-      <arc head="S_11_cannot_claim_B_1" tail="S_11_consider_B_1" kind="INPUT" mult="1" />
-      <arc head="S_11_cannot_claim_B_1" tail="B_1_unavail" kind="INPUT" mult="1" />
-      <arc head="B_1_unavail" tail="S_11_cannot_claim_B_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_failed" tail="S_11_cannot_claim_B_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_unavail" tail="S_11_cannot_claim_B_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_claim_B_1" tail="S_11_consider_B_1" kind="INPUT" mult="1" />
-      <arc head="S_11_claim_B_1" tail="B_1_unavail" kind="INHIBITOR" mult="1" />
-      <arc head="S_11_claimed_B_1" tail="S_11_claim_B_1" kind="OUTPUT" mult="1" />
-      <arc head="B_1_unavail" tail="S_11_claim_B_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_next_claim_1" tail="S_11_claimed_B_1" kind="INPUT" mult="1" />
-      <arc head="S_11_next_claim_1" tail="B_1_failed" kind="INPUT" mult="1" />
-      <arc head="B_1_failed" tail="S_11_next_claim_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_unavail" tail="S_11_next_claim_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_failed" tail="S_11_next_claim_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_activate_1_1" tail="S_11_claimed_B_1" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_1_1" tail="S_11_active" kind="INPUT" mult="1" />
-      <arc head="S_11_activate_1_1" tail="B_1_active" kind="INHIBITOR" mult="1" />
-      <arc head="S_11_claimed_B_1" tail="S_11_activate_1_1" kind="OUTPUT" mult="1" />
-      <arc head="S_11_active" tail="S_11_activate_1_1" kind="OUTPUT" mult="1" />
-      <arc head="B_1_active" tail="S_11_activate_1_1" kind="OUTPUT" mult="1" />
+      <arc head="A_activeFailing" kind="INPUT" tail="A_active"/>
+      <arc head="A_activeFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_activeFailing" kind="INHIBITOR" tail="A_dabled"/>
+      <arc head="A_active" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="A_activeFailing"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_active"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_failed"/>
+      <arc head="A_passiveFailing" kind="INHIBITOR" tail="A_dabled"/>
+      <arc head="A_failed" kind="OUTPUT" tail="A_passiveFailing"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="A_passiveFailing"/>
+      <arc head="B_activeFailing" kind="INPUT" tail="B_active"/>
+      <arc head="B_activeFailing" kind="INHIBITOR" tail="B_failed"/>
+      <arc head="B_activeFailing" kind="INHIBITOR" tail="B_dabled"/>
+      <arc head="B_active" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_failed" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_unavail" kind="OUTPUT" tail="B_activeFailing"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_active"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_failed"/>
+      <arc head="B_passiveFailing" kind="INHIBITOR" tail="B_dabled"/>
+      <arc head="B_failed" kind="OUTPUT" tail="B_passiveFailing"/>
+      <arc head="B_unavail" kind="OUTPUT" tail="B_passiveFailing"/>
+      <arc head="S_cannot_claim_A" kind="INPUT" tail="S_consider_A"/>
+      <arc head="S_cannot_claim_A" kind="INPUT" tail="A_unavail"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="S_cannot_claim_A"/>
+      <arc head="S_consider_B" kind="OUTPUT" tail="S_cannot_claim_A"/>
+      <arc head="S_claim_A" kind="INPUT" tail="S_consider_A"/>
+      <arc head="S_claim_A" kind="INHIBITOR" tail="A_unavail"/>
+      <arc head="S_claimed_A" kind="OUTPUT" tail="S_claim_A"/>
+      <arc head="A_unavail" kind="OUTPUT" tail="S_claim_A"/>
+      <arc head="S_next_claim_0" kind="INPUT" tail="S_claimed_A"/>
+      <arc head="S_next_claim_0" kind="INPUT" tail="A_failed"/>
+      <arc head="A_failed" kind="OUTPUT" tail="S_next_claim_0"/>
+      <arc head="S_consider_B" kind="OUTPUT" tail="S_next_claim_0"/>
+      <arc head="S_activate_0_0" kind="INPUT" tail="S_claimed_A"/>
+      <arc head="S_activate_0_0" kind="INPUT" tail="S_active"/>
+      <arc head="S_activate_0_0" kind="INHIBITOR" tail="A_active"/>
+      <arc head="S_claimed_A" kind="OUTPUT" tail="S_activate_0_0"/>
+      <arc head="S_active" kind="OUTPUT" tail="S_activate_0_0"/>
+      <arc head="A_active" kind="OUTPUT" tail="S_activate_0_0"/>
+      <arc head="S_cannot_claim_B" kind="INPUT" tail="S_consider_B"/>
+      <arc head="S_cannot_claim_B" kind="INPUT" tail="B_unavail"/>
+      <arc head="S_cannot_claim_B" kind="INHIBITOR" tail="S_failed"/>
+      <arc head="B_unavail" kind="OUTPUT" tail="S_cannot_claim_B"/>
+      <arc head="S_failed" kind="OUTPUT" tail="S_cannot_claim_B"/>
+      <arc head="S_unavail" kind="OUTPUT" tail="S_cannot_claim_B"/>
+      <arc head="S_claim_B" kind="INPUT" tail="S_consider_B"/>
+      <arc head="S_claim_B" kind="INHIBITOR" tail="B_unavail"/>
+      <arc head="S_claimed_B" kind="OUTPUT" tail="S_claim_B"/>
+      <arc head="B_unavail" kind="OUTPUT" tail="S_claim_B"/>
+      <arc head="S_next_claim_1" kind="INPUT" tail="S_claimed_B"/>
+      <arc head="S_next_claim_1" kind="INPUT" tail="B_failed"/>
+      <arc head="S_next_claim_1" kind="INHIBITOR" tail="S_failed"/>
+      <arc head="B_failed" kind="OUTPUT" tail="S_next_claim_1"/>
+      <arc head="S_unavail" kind="OUTPUT" tail="S_next_claim_1"/>
+      <arc head="S_failed" kind="OUTPUT" tail="S_next_claim_1"/>
+      <arc head="S_activate_1_1" kind="INPUT" tail="S_claimed_B"/>
+      <arc head="S_activate_1_1" kind="INPUT" tail="S_active"/>
+      <arc head="S_activate_1_1" kind="INHIBITOR" tail="B_active"/>
+      <arc head="S_claimed_B" kind="OUTPUT" tail="S_activate_1_1"/>
+      <arc head="S_active" kind="OUTPUT" tail="S_activate_1_1"/>
+      <arc head="B_active" kind="OUTPUT" tail="S_activate_1_1"/>
     </edges>
   </gspn>
 </project>

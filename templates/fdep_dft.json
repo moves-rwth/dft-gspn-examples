@@ -46,18 +46,18 @@
         },
         {
             "data": {
-                "id": "12",
-                "name": "Z",
-                "type": "seq",
+                "id": "8",
+                "name": "D",
+                "type": "fdep",
                 "children": [
                     "0",
                     "1"
                 ],
-                "label": "Z"
+                "label": "D"
             },
             "position": {
-                "x": 496.4972615044363,
-                "y": 148.75330713191568
+                "x": 504,
+                "y": 133
             },
             "group": "nodes",
             "removed": false,
@@ -65,7 +65,7 @@
             "selectable": true,
             "locked": false,
             "grabbable": true,
-            "classes": "seq"
+            "classes": "fdep"
         }
     ]
 }
